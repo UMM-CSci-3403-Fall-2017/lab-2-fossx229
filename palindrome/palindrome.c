@@ -20,19 +20,18 @@ char* str_reverse(char* str) {
 
 char* palindrome(char* str) {
   char *rev;
-  int i;
+  int i=0;
   bool result = true;
   char *answer;
-
+  
   rev = str_reverse(str);
-  i = 0;
   while (result && str[i]) {
     if (str[i] != rev[i]) {
       result = false;
     }
     ++i;
   }
-
+  free(rev);
   if (result) {
     answer = (char*) calloc(4, sizeof(char));
     answer[0] = 'Y';
@@ -45,6 +44,5 @@ char* palindrome(char* str) {
     answer[1] = 'o';
     answer[2] = '\0';
   }
-
   return answer;
 }
