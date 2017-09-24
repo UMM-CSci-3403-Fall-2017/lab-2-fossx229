@@ -3,11 +3,17 @@
 #include "palindrome.h"
 
 void is_palindrome(char* str) {
-  ASSERT_STREQ(palindrome(str), "Yes");
+  char* line;
+  line = palindrome(str);
+  ASSERT_STREQ(line, "Yes");
+  free(line);
 }
 
 void not_palindrome(char* str) {
-  ASSERT_STREQ(palindrome(str), "No");
+  char* line;
+  line = palindrome(str);
+  ASSERT_STREQ(line, "No");
+  free(line);
 }
 
 TEST(Palindrome, HandlesEmptyString) {
