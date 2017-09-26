@@ -5,7 +5,7 @@
 #include "disemvowel.h"
 
 char* disemvowel(char* str) {
-  int i;
+  int i=0;
   int len = strlen(str);
   int count = 0;
   int z = 0;
