@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,6 +13,8 @@ int main(int argc, char* argv[]) {
     result=disemvowel(line);
     printf("%s\n", result);
     free(result);
+   
   }
-  
+  free(line);
 }
+
