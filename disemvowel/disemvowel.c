@@ -27,7 +27,7 @@ char* disemvowel(char* str) {
     }
   }
 
-  free(str);
+
   result[count] = '\0';
   return result;
 }
