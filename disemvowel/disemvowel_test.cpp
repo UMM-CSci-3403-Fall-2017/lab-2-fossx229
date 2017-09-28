@@ -9,25 +9,25 @@ TEST(Disemvowel, HandleEmptyString) {
 }
 
 TEST(Disemvowel, HandleNoVowels) {
-  char* line = disemvowel(((char*) "pqrst"));
+  char* line = disemvowel((char*) "pqrst");
   ASSERT_STREQ("pqrst", line);
   free(line);
 }
 
 TEST(Disemvowel, HandleOnlyVowels) {
-  char* line = disemvowel(((char*) "aeiouAEIOUOIEAuoiea"));
+  char* line = disemvowel((char*) "aeiouAEIOUOIEAuoiea");
   ASSERT_STREQ("", line);
   free(line);
 }
 
 TEST(Disemvowel, HandleMorrisMinnesota) {
-    char* line = disemvowel(((char*) "Morris, Minnesota"));
+    char* line = disemvowel((char*) "Morris, Minnesota");
   ASSERT_STREQ("Mrrs, Mnnst", line);
   free(line);
 }
 
 TEST(Disemvowel, HandlePunctuation) {
-  char* line = disemvowel(((char*) "An (Unexplained) Elephant!"));
+  char* line = disemvowel((char*) "An (Unexplained) Elephant!");
   ASSERT_STREQ("n (nxplnd) lphnt!", line);
   free(line);
 }
